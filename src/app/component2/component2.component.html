@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <button (click)="desplegable()">Ver Noticias</button>
+    </div>
+    <div *ngIf="display">
+        <div class="row justify-content-start">
+            <div *ngFor="let Pelicula of array">
+                <div id="noticias">
+                    <h3>{{Pelicula.titulo}}</h3> 
+                    <img id="imae" src="{{Pelicula.imagen}}">         
+                    <textarea readonly="readonly" cols="35" rows="5">{{Pelicula.descripcion}}</textarea> 
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div *ngIf="display">
+        <div class="row justify-content-center">
+            <button (click)="desplegablequitar()">Quitar Noticias</button>
+        </div>
+    </div>
+</div>  

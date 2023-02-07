@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <h1 id="Titulo">NOTCH</h1>
+  </div>
+  <div class="row justify-content-start">
+    <div *ngFor="let Pelicula of array" class="col-3">
+      <img src="{{Pelicula.imagen}}">
+      <h1>{{Pelicula.nombre}}</h1>
+      <textarea  readonly="readonly" cols="30" rows="6">{{Pelicula.descripcion}}</textarea>
+    </div>
+  </div>
+  <div>
+  <div class="row justify-content-center">
+    <div id="fa">
+      <form method="post">
+      <div>
+        <h3>Añadir Pelicula</h3>
+      </div>
+      <div>
+        <label>URL Imagen:<input id="url"/></label>
+      </div>
+      <div>
+          <label>Titulo:<input id="titulo"/></label>
+      </div>
+      <div>
+        <label>Descripcion:<input id="descripcion"/></label>
+      </div>
+      </form>
+      <button id="boton1" (click)="addpelicula()">Enviar</button>
+      </div>
+    <div id="fa">
+      <form method="post">
+        <div>
+          <h3>Eliminar Pelicula</h3>
+        </div>
+        <div>
+          <label>Titulo:<input id="titulo1"/></label>
+        </div>
+      </form>
+      <button id="boton1" (click)="droppelicula()">Eliminar</button>
+    </div>
+  </div>
+
+
+  
+</div>
+<app-component2></app-component2>
